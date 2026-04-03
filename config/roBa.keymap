@@ -36,11 +36,18 @@
             bindings = <&to 0>, <&to 1>, <&to 2>, <&to 3>;
         };
 
-        new_behavior: new_behavior {
+        space_eng: space_eng {
             compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR";
+            label = "SPACE_ENG";
             #binding-cells = <0>;
-            bindings = <&none>;
+            bindings = <&kp SPACE>, <&kp SPACE>, <&kp LA(LANGUAGE_5)>;
+        };
+
+        enter_jap: enter_jap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ENTER_JAP";
+            #binding-cells = <0>;
+            bindings = <&kp ENTER>, <&kp ENTER>, <&kp LANGUAGE_4>;
         };
     };
 
