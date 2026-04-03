@@ -73,6 +73,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        layer_td: layer_td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LAYER_TD";
+            #binding-cells = <0>;
+            bindings = <&mo 0>, <&mo 1>;
+        };
     };
 
     keymap {
@@ -80,21 +87,21 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A      &kp S         &kp D         &kp F                        &kp G        &mkp MB3                           &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&kp Z      &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp Q      &kp W         &kp E         &kp R      &kp T                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&kp A      &kp S         &kp D         &kp F      &kp G           &mkp MB3        &kp F13        &kp H        &kp J  &kp K      &kp L    &kp NON_US_BACKSLASH
+&kp Z      &kp X         &kp C         &kp V      &kp B           &kp ESCAPE      &kp BACKSPACE  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &layer_td  &kp LEFT_SHIFT  &kp TAB         &kp SPACE      &lt 1 ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
         };
 
-        FUNCTION {
+        NO_FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &kp F12
+&kp GRAVE  &kp F9        &kp F10       &kp F11    &kp F12                                        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp NUMBER_7  &kp NUMBER_8  &kp F5
+&kp CAPS   &kp F5        &kp F6        &kp F7     &kp F8          &mkp MB3        &kp F13        &kp SEMICOLON     &kp SQT            &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6
+&kp F13    &kp F1        &kp F2        &kp F3     &kp F4          &kp ESCAPE      &kp BACKSPACE  &kp MINUS         &kp EQUAL          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &layer_td  &kp LEFT_SHIFT  &kp TAB         &trans         &trans                                                           &kp NUMBER_0
             >;
         };
 
