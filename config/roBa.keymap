@@ -36,12 +36,11 @@
             bindings = <&to 0>, <&to 1>, <&to 2>, <&to 3>;
         };
 
-        sl_mouse: sl_mouse {
-            compatible = "zmk,behavior-sticky-key";
-            label = "SL_MOUSE";
-            bindings = <&mo>;
-            #binding-cells = <1>;
-            release-after-ms = <5000>;
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR";
+            #binding-cells = <0>;
+            bindings = <&none>;
         };
     };
 
