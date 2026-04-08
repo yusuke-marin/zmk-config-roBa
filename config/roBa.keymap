@@ -40,14 +40,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SPACE_ENG";
             #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp SPACE>, <&kp LA(LANGUAGE_5)>;
+            bindings = <&kp SPACE>, <&kp SPACE>, <&kp LANGUAGE_2>;
         };
 
         enter_jap: enter_jap {
             compatible = "zmk,behavior-tap-dance";
             label = "ENTER_JAP";
             #binding-cells = <0>;
-            bindings = <&kp ENTER>, <&kp ENTER>, <&kp INT_MUHENKAN>;
+            bindings = <&kp ENTER>, <&kp ENTER>, <&kp LANGUAGE_1>;
         };
     };
 
