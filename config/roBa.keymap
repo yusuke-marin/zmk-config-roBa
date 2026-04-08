@@ -47,7 +47,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "ENTER_JAP";
             #binding-cells = <0>;
-            bindings = <&kp ENTER>, <&kp ENTER>, <&kp LANG_HIRAGANA>;
+            bindings = <&kp ENTER>, <&kp ENTER>, <&kp INT_KANA>;
         };
     };
 
