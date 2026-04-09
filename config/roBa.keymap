@@ -85,10 +85,10 @@
 
         MOUSE {
             bindings = <
-&trans          &kp UP_ARROW    &trans           &trans     &trans                                         &trans      &trans  &trans  &mkp MB1  &mkp MB2
-&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans     &trans          &mkp MB3        &F13_Layer     &trans      &trans  &trans  &trans    &trans
-&trans          &trans          &trans           &trans     &trans          &kp ESCAPE      &kp BACKSPACE  &trans      &trans  &trans  &trans    &trans
-&kp RCTRL       &kp LEFT_WIN    &kp LEFT_ALT     &layer_td  &kp LEFT_SHIFT  &kp TAB         &space_eng     &enter_jap                            &kp DELETE
+&trans          &kp UP_ARROW    &trans           &trans     &trans                                         &trans      &trans  &trans    &mkp MB1        &mkp MB2
+&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans     &trans          &mkp MB3        &F13_Layer     &trans      &trans  &trans    &kp UP_ARROW    &mkp MB3
+&trans          &trans          &trans           &trans     &trans          &kp ESCAPE      &kp BACKSPACE  &trans      &trans  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT
+&kp RCTRL       &kp LEFT_WIN    &kp LEFT_ALT     &layer_td  &kp LEFT_SHIFT  &kp TAB         &space_eng     &enter_jap                                    &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
