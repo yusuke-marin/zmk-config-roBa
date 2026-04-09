@@ -49,6 +49,13 @@
             #binding-cells = <0>;
             bindings = <&kp ENTER>, <&kp ENTER>, <&kp LANGUAGE_1>;
         };
+
+        F13_Layer: F13_Layer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "F13_LAYER";
+            #binding-cells = <0>;
+            bindings = <&kp F13>, <&to 0>, <&to 1>;
+        };
     };
 
     keymap {
@@ -57,7 +64,7 @@
         default_layer {
             bindings = <
 &kp Q      &kp W         &kp E         &kp R      &kp T                                          &kp Y       &kp U  &kp I      &kp O    &kp P
-&kp A      &kp S         &kp D         &kp F      &kp G           &mkp MB3        &kp F13        &kp H       &kp J  &kp K      &kp L    &kp NON_US_BACKSLASH
+&kp A      &kp S         &kp D         &kp F      &kp G           &mkp MB3        &F13_Layer     &kp H       &kp J  &kp K      &kp L    &kp NON_US_BACKSLASH
 &kp Z      &kp X         &kp C         &kp V      &kp B           &kp ESCAPE      &kp BACKSPACE  &kp N       &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &layer_td  &kp LEFT_SHIFT  &kp TAB         &space_eng     &enter_jap                             &kp DEL
             >;
@@ -68,7 +75,7 @@
         NO_FUNCTION {
             bindings = <
 &kp GRAVE  &kp F9        &kp F10       &kp F11    &kp F12                                        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp NUMBER_7  &kp NUMBER_8  &kp F5
-&kp CAPS   &kp F5        &kp F6        &kp F7     &kp F8          &mkp MB3        &kp F13        &kp SEMICOLON     &kp SQT            &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6
+&kp CAPS   &kp F5        &kp F6        &kp F7     &kp F8          &mkp MB3        &F13_Layer     &kp SEMICOLON     &kp SQT            &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6
 &kp F13    &kp F1        &kp F2        &kp F3     &kp F4          &kp ESCAPE      &kp BACKSPACE  &kp MINUS         &kp EQUAL          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3
 &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &layer_td  &kp LEFT_SHIFT  &kp TAB         &space_eng     &enter_jap                                                       &kp NUMBER_0
             >;
@@ -79,7 +86,7 @@
         MOUSE {
             bindings = <
 &trans          &kp UP_ARROW    &trans           &trans     &trans                                         &trans      &trans  &trans  &mkp MB1  &mkp MB2
-&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans     &trans          &mkp MB3        &kp F13        &trans      &trans  &trans  &trans    &trans
+&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans     &trans          &mkp MB3        &F13_Layer     &trans      &trans  &trans  &trans    &trans
 &trans          &trans          &trans           &trans     &trans          &kp ESCAPE      &kp BACKSPACE  &trans      &trans  &trans  &trans    &trans
 &kp RCTRL       &kp LEFT_WIN    &kp LEFT_ALT     &layer_td  &kp LEFT_SHIFT  &kp TAB         &space_eng     &enter_jap                            &kp DELETE
             >;
@@ -90,7 +97,7 @@
         change_layer {
             bindings = <
 &trans        &trans        &trans        &trans        &trans                                &trans      &trans  &trans  &trans  &trans
-&trans        &trans        &trans        &trans        &trans        &trans      &trans      &trans      &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans        &trans      &F13_Layer  &trans      &trans  &trans  &trans  &trans
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans      &trans      &trans      &trans  &to 1   &to 2   &to 3
 &trans        &trans        &trans        &layer_td     &trans        &trans      &space_eng  &enter_jap                          &to 0
             >;
