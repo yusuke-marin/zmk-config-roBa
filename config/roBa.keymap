@@ -74,7 +74,7 @@
 
         NO_FUNCTION {
             bindings = <
-&kp GRAVE  &kp F9        &kp F10       &kp F11    &kp F12                                        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp NUMBER_7  &kp NUMBER_8  &kp F5
+&kp GRAVE  &kp F9        &kp F10       &kp F11    &kp F12                                        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9
 &kp CAPS   &kp F5        &kp F6        &kp F7     &kp F8          &mkp MB3        &F13_Layer     &kp SEMICOLON     &kp SQT            &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6
 &kp F13    &kp F1        &kp F2        &kp F3     &kp F4          &kp ESCAPE      &kp BACKSPACE  &kp MINUS         &kp EQUAL          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3
 &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &layer_td  &kp LEFT_SHIFT  &kp TAB         &space_eng     &enter_jap                                                       &kp NUMBER_0
